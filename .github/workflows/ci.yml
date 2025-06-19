@@ -62,7 +62,7 @@ jobs:
           # Disable security for OpenSearch
           plugins.security.disabled: ${{ contains(matrix.search[1], 'opensearch') && 'true' || '' }}
           # OpenSearch 2.12.0 removed the default admin password
-          OPENSEARCH_INITIAL_ADMIN_PASSWORD: ${{secrets.OPENSEARCH_INITIAL_ADMIN_PASSWORD}}
+          OPENSEARCH_INITIAL_ADMIN_PASSWORD: M7$thunder9K # this doesn't need to be a secret
           # Disable security for Elasticsearch 8.x and 9.x
           xpack.security.enabled: ${{ contains(matrix.search[1], 'elasticsearch') && 'false' || '' }}
         options: >-
